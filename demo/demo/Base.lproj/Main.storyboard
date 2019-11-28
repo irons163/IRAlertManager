@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="83" translatesAutoresizingMaskIntoConstraints="NO" id="bXT-pb-vxk">
+                                <rect key="frame" x="73.5" y="94" width="267" height="482"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6G-HV-tT3">
+                                        <rect key="frame" x="97" y="0.0" width="73" height="30"/>
+                                        <state key="normal" title="show Alert"/>
+                                        <connections>
+                                            <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UXE-xg-BFC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAR-IU-Dus">
+                                        <rect key="frame" x="68" y="113" width="131" height="30"/>
+                                        <state key="normal" title="show Custom Alert"/>
+                                        <connections>
+                                            <action selector="showCustomAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tAu-XT-8a9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1r-QC-1Vl">
+                                        <rect key="frame" x="69.5" y="226" width="128" height="30"/>
+                                        <state key="normal" title="show System Alert"/>
+                                        <connections>
+                                            <action selector="showSystemAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9e1-Ay-anq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgG-1a-8uc">
+                                        <rect key="frame" x="64" y="339" width="139" height="30"/>
+                                        <state key="normal" title="show System Dialog"/>
+                                        <connections>
+                                            <action selector="showSystemDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jUT-88-CCg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80s-Pd-dku" userLabel="showSystemDialog And Loading page">
+                                        <rect key="frame" x="0.0" y="452" width="267" height="30"/>
+                                        <state key="normal" title="show System Dialog And Loading page"/>
+                                        <connections>
+                                            <action selector="showSystemDialogAndLoadingpage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jHx-HJ-nA6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bXT-pb-vxk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="40P-uc-qMx"/>
+                            <constraint firstItem="bXT-pb-vxk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="n2s-zr-hvI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="139"/>
+        </scene>
+    </scenes>
+</document>
