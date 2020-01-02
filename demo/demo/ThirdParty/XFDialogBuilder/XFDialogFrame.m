@@ -39,15 +39,29 @@ const NSString *XFDialogMultiLineTitleMargin = @"XFDialogMultiLineTitleMargin";
 @property (nonatomic, weak) UIView *panelView;
 
 @property (nonatomic, assign) CGFloat titleChangeValue;
+
 @end
 
 @implementation XFDialogFrame
+
+- (instancetype)init {
+    if (self = [super init]) {
+        CGSize dialogSize = self.frame.size;
+        _widthConstraint = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:dialogSize.width];
+        _widthConstraint.active = YES;
+        _heightConstraint = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:dialogSize.height];
+        _heightConstraint.active = YES;
+    }
+    return self;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         self.clipsToBounds = YES;
+        _widthConstraint.constant = frame.size.width;
+        _heightConstraint.constant = frame.size.height;
     }
     return self;
 }
@@ -89,7 +103,10 @@ const NSString *XFDialogMultiLineTitleMargin = @"XFDialogMultiLineTitleMargin";
     // 添加子控件其它视图
     [dialogFrameView addContentView];
     // 设置对话框大小
-    dialogFrameView.size = [dialogFrameView dialogSize];
+//    dialogFrameView.size = [dialogFrameView dialogSize];
+    CGSize dialogSize = [dialogFrameView dialogSize];
+    dialogFrameView.widthConstraint.constant = dialogSize.width;
+    dialogFrameView.heightConstraint.constant = dialogSize.height;
     
     // 添加到遮盖层
     UIColor *maskViewBackColor = XFDialogRealValueForRef(attrs, XFDialogMaskViewBackgroundColor, [UIColor blackColor]);
@@ -126,7 +143,10 @@ const NSString *XFDialogMultiLineTitleMargin = @"XFDialogMultiLineTitleMargin";
     // 添加子控件其它视图
     [dialogFrameView addContentView];
     // 设置对话框大小
-    dialogFrameView.size = [dialogFrameView dialogSize];
+//    dialogFrameView.size = [dialogFrameView dialogSize];
+    CGSize dialogSize = [dialogFrameView dialogSize];
+    dialogFrameView.widthConstraint.constant = dialogSize.width;
+    dialogFrameView.heightConstraint.constant = dialogSize.height;
     
     // 添加到遮盖层
     maskView.dialogView = dialogFrameView;
@@ -193,7 +213,11 @@ const NSString *XFDialogMultiLineTitleMargin = @"XFDialogMultiLineTitleMargin";
     }
     
     self.panelView.size = self.dialogSize;
-    self.size = self.dialogSize;
+//    self.size = self.dialogSize;
+//    CGSize dialogSize = self.dialogSize;
+//    _widthConstraint.constant = dialogSize.width;
+//    _heightConstraint.constant = dialogSize.height;
+//    [self setNeedsUpdateConstraints];
 }
 
 // 获取真实标题高度

@@ -6,5 +6,6 @@ target 'demo' do
   use_frameworks!
 
   # Pods for demo
-  pod 'Masonry'	
+  pod 'Masonry'
+#  pod 'LGAlertView'
 end

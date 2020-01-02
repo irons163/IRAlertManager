@@ -111,6 +111,14 @@
         self.dialogView.hidden = NO;
         animationEngineBlock(self.dialogView);
     }else{
+        [NSLayoutConstraint constraintWithItem:self.dialogView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0].active = YES;
+        [NSLayoutConstraint constraintWithItem:self.dialogView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0f constant:0].active = YES;
+        self.dialogView.translatesAutoresizingMaskIntoConstraints = NO;
+        
+//        [self.dialogView setNeedsUpdateConstraints];
+//        [self.dialogView setNeedsLayout];
+//        [self.dialogView layoutIfNeeded];
+        
         CABasicAnimation *scaleAnima= [CABasicAnimation animationWithKeyPath:@"transform.scale"];
         scaleAnima.delegate = self;
         [scaleAnima setDuration:0.29f];
@@ -123,8 +131,7 @@
         [scaleAnima setTimingFunction:timingFunction];
         
         [self.dialogView.layer addAnimation:scaleAnima forKey:@"scale"];
-        [NSLayoutConstraint constraintWithItem:self.dialogView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0].active = YES;
-        [NSLayoutConstraint constraintWithItem:self.dialogView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0f constant:0].active = YES;
+        
     }
 }
 

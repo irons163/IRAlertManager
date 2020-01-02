@@ -88,6 +88,9 @@ typedef void(^CommitClickBlock)(id inputData);
 
 @property (nonatomic, strong) UIView *customView;
 
+@property (nonatomic, strong) NSLayoutConstraint *widthConstraint;
+@property (nonatomic, strong) NSLayoutConstraint *heightConstraint;
+
 /**
  *  添加子视图
  */
