@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="83" translatesAutoresizingMaskIntoConstraints="NO" id="bXT-pb-vxk">
-                                <rect key="frame" x="73.5" y="94" width="267" height="482"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bXT-pb-vxk">
+                                <rect key="frame" x="73.5" y="94" width="267" height="450"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6G-HV-tT3">
                                         <rect key="frame" x="97" y="0.0" width="73" height="30"/>
@@ -27,28 +27,42 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAR-IU-Dus">
-                                        <rect key="frame" x="68" y="113" width="131" height="30"/>
+                                        <rect key="frame" x="68" y="70" width="131" height="30"/>
                                         <state key="normal" title="show Custom Alert"/>
                                         <connections>
                                             <action selector="showCustomAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tAu-XT-8a9"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvw-OW-xJw">
+                                        <rect key="frame" x="87.5" y="140" width="92" height="30"/>
+                                        <state key="normal" title="show LGAlert"/>
+                                        <connections>
+                                            <action selector="showLGAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yc0-tW-M2c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4l-1E-7uq">
+                                        <rect key="frame" x="59" y="210" width="149" height="30"/>
+                                        <state key="normal" title="show Custom LGAlert"/>
+                                        <connections>
+                                            <action selector="showCustomLGAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ifp-ju-D70"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1r-QC-1Vl">
-                                        <rect key="frame" x="69.5" y="226" width="128" height="30"/>
+                                        <rect key="frame" x="69.5" y="280" width="128" height="30"/>
                                         <state key="normal" title="show System Alert"/>
                                         <connections>
                                             <action selector="showSystemAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9e1-Ay-anq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgG-1a-8uc">
-                                        <rect key="frame" x="64" y="339" width="139" height="30"/>
+                                        <rect key="frame" x="64" y="350" width="139" height="30"/>
                                         <state key="normal" title="show System Dialog"/>
                                         <connections>
                                             <action selector="showSystemDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jUT-88-CCg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80s-Pd-dku" userLabel="showSystemDialog And Loading page">
-                                        <rect key="frame" x="0.0" y="452" width="267" height="30"/>
+                                        <rect key="frame" x="0.0" y="420" width="267" height="30"/>
                                         <state key="normal" title="show System Dialog And Loading page"/>
                                         <connections>
                                             <action selector="showSystemDialogAndLoadingpage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jHx-HJ-nA6"/>

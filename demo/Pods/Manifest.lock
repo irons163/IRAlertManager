@@ -1,16 +1,20 @@
 PODS:
+  - LGAlertView (2.4.0)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
+  - LGAlertView
   - Masonry
 
 SPEC REPOS:
   trunk:
+    - LGAlertView
     - Masonry
 
 SPEC CHECKSUMS:
+  LGAlertView: 2f5e83dd5cc2537de57d98727650609e86197d1a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 5a8cd2e9bbffa8cc988f98ddb52c08b880785e58
+PODFILE CHECKSUM: 266807e7fd1f24029dfe55dedc30653ae1912b10
 
 COCOAPODS: 1.8.0.beta.2

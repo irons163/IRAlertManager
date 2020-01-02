@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A2C8DB523BDE64000CAD910 /* IRAlertLG.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2C8DB423BDE64000CAD910 /* IRAlertLG.m */; };
 		8A3A8320238B7DEF00EE74D5 /* UIView+DialogMeasure.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A82FF238B7DEE00EE74D5 /* UIView+DialogMeasure.m */; };
 		8A3A8321238B7DEF00EE74D5 /* XFDialogFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A8301238B7DEE00EE74D5 /* XFDialogFrame.m */; };
 		8A3A8322238B7DEF00EE74D5 /* XFDialogNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A8302238B7DEE00EE74D5 /* XFDialogNotice.m */; };
@@ -23,8 +24,6 @@
 		8A3A832D238B7DEF00EE74D5 /* XFDialogCommandButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A8319238B7DEE00EE74D5 /* XFDialogCommandButton.m */; };
 		8A3A832E238B7DEF00EE74D5 /* XFDialogTextArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A831E238B7DEE00EE74D5 /* XFDialogTextArea.m */; };
 		8A3A8332238B7E2C00EE74D5 /* IRAlertXF.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A8331238B7E2C00EE74D5 /* IRAlertXF.m */; };
-		8A3A8333238B7E4D00EE74D5 /* IRAlertManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3A82FB238B72D200EE74D5 /* IRAlertManager.framework */; };
-		8A3A8334238B7E4D00EE74D5 /* IRAlertManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3A82FB238B72D200EE74D5 /* IRAlertManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8A3A8338238B7F1000EE74D5 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A8337238B7F1000EE74D5 /* UIImageEffects.m */; };
 		8A3A8348238BDC4E00EE74D5 /* CustomAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A3A8345238BDC4D00EE74D5 /* CustomAlertView.xib */; };
 		8A3A8349238BDC4E00EE74D5 /* CustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A8347238BDC4E00EE74D5 /* CustomAlertView.m */; };
@@ -47,22 +46,10 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		8A3A8335238B7E4E00EE74D5 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				8A3A8334238B7E4D00EE74D5 /* IRAlertManager.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		35FC5301C909BA24EDAD34BD /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
+		8A2C8DB323BDE64000CAD910 /* IRAlertLG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRAlertLG.h; sourceTree = "<group>"; };
+		8A2C8DB423BDE64000CAD910 /* IRAlertLG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRAlertLG.m; sourceTree = "<group>"; };
 		8A3A82F6238B72D200EE74D5 /* IRAlertManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IRAlertManager.xcodeproj; path = ../IRAlertManager.xcodeproj; sourceTree = "<group>"; };
 		8A3A82FE238B7DEE00EE74D5 /* XFDialogOptionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogOptionButton.h; sourceTree = "<group>"; };
 		8A3A82FF238B7DEE00EE74D5 /* UIView+DialogMeasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DialogMeasure.m"; sourceTree = "<group>"; };
@@ -122,7 +109,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A3A8333238B7E4D00EE74D5 /* IRAlertManager.framework in Frameworks */,
 				ADF34F281D92DE8FED1595F8 /* Pods_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +203,8 @@
 			children = (
 				8A3A8330238B7E2C00EE74D5 /* IRAlertXF.h */,
 				8A3A8331238B7E2C00EE74D5 /* IRAlertXF.m */,
+				8A2C8DB323BDE64000CAD910 /* IRAlertLG.h */,
+				8A2C8DB423BDE64000CAD910 /* IRAlertLG.m */,
 				8A3A8346238BDC4D00EE74D5 /* CustomAlertView.h */,
 				8A3A8347238BDC4E00EE74D5 /* CustomAlertView.m */,
 				8A3A8345238BDC4D00EE74D5 /* CustomAlertView.xib */,
@@ -288,7 +276,6 @@
 				8A49E4DB22DD9AC6006BBA5C /* Sources */,
 				8A49E4DC22DD9AC6006BBA5C /* Frameworks */,
 				8A49E4DD22DD9AC6006BBA5C /* Resources */,
-				8A3A8335238B7E4E00EE74D5 /* Embed Frameworks */,
 				80B25AECA9B828897ACE80C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -409,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A2C8DB523BDE64000CAD910 /* IRAlertLG.m in Sources */,
 				8A49E4E722DD9AC6006BBA5C /* ViewController.m in Sources */,
 				8A49E4F222DD9ACA006BBA5C /* main.m in Sources */,
 				8A3A8321238B7DEF00EE74D5 /* XFDialogFrame.m in Sources */,

@@ -7,5 +7,6 @@ target 'demo' do
 
   # Pods for demo
   pod 'Masonry'
-#  pod 'LGAlertView'
+  pod 'LGAlertView'
+  pod 'IRAlertManager'
 end

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "IRAlertXF.h"
+#import "IRAlertLG.h"
 #import "CustomAlertView.h"
 //#import "IRAlert/NetworkManager.h"
 //#import <IRNotificationReceiver/IRNotificationReceiver.h>
@@ -97,6 +98,75 @@
     };
     [alert addAction:cancelAction];
     
+    [[IRAlertManager sharedInstance] showAlert:alert];
+}
+
+- (IBAction)showLGAlert:(id)sender {
+    IRAlertAction *commitAction = [[IRAlertAction alloc] init];
+    commitAction.title = @"OK";
+    commitAction.style = IRAlertActionStyleDefault;
+
+    IRAlertAction *cancelAction = [[IRAlertAction alloc] init];
+    cancelAction.title = @"Cancel";
+    cancelAction.style = IRAlertActionStyleCancel;
+    
+    alert = [[IRAlertLG alloc] initWithTitle:nil message:nil style:IRAlertLGStyleAlert buttonActions:@[commitAction] cancelButtonAction:cancelAction destructiveButtonAction:nil];
+    
+    __weak IRAlert *wAlert = alert;
+    commitAction.handler = ^(IRAlertAction * _Nonnull action) {
+        [[IRAlertManager sharedInstance] hideAlert:wAlert];
+    };
+    __weak ViewController *wSelf = self;
+    cancelAction.handler = ^(IRAlertAction * _Nonnull action) {
+        [[IRAlertManager sharedInstance] hideLoadingViewWithTarget:wSelf];
+    };
+    
+    [(IRAlertLG *)alert setBlurWithBlurEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular]];
+    [(IRAlertLG *)alert setBlurWithColor:[ViewController blurTintColor]];
+    [(IRAlertLG *)alert setBlurWithAlpha:0.4f];
+    [alert setCornerRadius:20];
+    [[IRAlertManager sharedInstance] showAlert:alert];
+}
+
+- (IBAction)showCustomLGAlert:(id)sender {
+    IRAlertAction *commitAction = [[IRAlertAction alloc] init];
+    commitAction.title = @"OK";
+    commitAction.style = IRAlertActionStyleDefault;
+
+    IRAlertAction *cancelAction = [[IRAlertAction alloc] init];
+    cancelAction.title = @"Cancel";
+    cancelAction.style = IRAlertActionStyleCancel;
+    
+    CustomAlertView* customView = [[CustomAlertView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width - 100, 180)];
+    customView.titleLabel.text = @"Test";
+    customView.messageLabel.text = @"Message";
+    [customView.commitButton setTitle:@"OK" forState:UIControlStateNormal];
+    [customView.cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
+    
+    alert = [[IRAlertLG alloc] initWithViewAndTitle:nil message:nil style:IRAlertLGStyleAlert view:customView buttonActions:@[commitAction] cancelButtonAction:cancelAction destructiveButtonAction:nil];
+    customView.alert = alert;
+    
+    customView.commitButtonClick = ^{
+        
+    };
+    
+    customView.cancelButtonClick = ^{
+        
+    };
+    
+    __weak IRAlert *wAlert = alert;
+    commitAction.handler = ^(IRAlertAction * _Nonnull action) {
+        [[IRAlertManager sharedInstance] hideAlert:wAlert];
+    };
+    __weak ViewController *wSelf = self;
+    cancelAction.handler = ^(IRAlertAction * _Nonnull action) {
+        [[IRAlertManager sharedInstance] hideLoadingViewWithTarget:wSelf];
+    };
+    
+    [(IRAlertLG *)alert setBlurWithBlurEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular]];
+    [(IRAlertLG *)alert setBlurWithColor:[ViewController blurTintColor]];
+    [(IRAlertLG *)alert setBlurWithAlpha:0.4f];
+    [alert setCornerRadius:20];
     [[IRAlertManager sharedInstance] showAlert:alert];
 }
 
