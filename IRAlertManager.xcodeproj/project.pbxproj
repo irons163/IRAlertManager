@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A2C8DC123BE039C00CAD910 /* UIImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A2C8DBF23BE039C00CAD910 /* UIImageEffects.h */; };
+		8A2C8DC223BE039C00CAD910 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2C8DC023BE039C00CAD910 /* UIImageEffects.m */; };
 		8A3A8352238D2B2B00EE74D5 /* IRAlertSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A3A8350238D2B2B00EE74D5 /* IRAlertSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A3A8353238D2B2B00EE74D5 /* IRAlertSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A8351238D2B2B00EE74D5 /* IRAlertSystem.m */; };
-		8A4B7C80238F9253004FED4D /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4B7C7E238F9252004FED4D /* UIImageEffects.m */; };
-		8A4B7C81238F9253004FED4D /* UIImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A4B7C7F238F9253004FED4D /* UIImageEffects.h */; };
 		8A4B7C84238F92B2004FED4D /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A4B7C82238F92B2004FED4D /* Utilities.h */; };
 		8A4B7C85238F92B2004FED4D /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4B7C83238F92B2004FED4D /* Utilities.m */; };
 		8A59F10E22DC19370046A8D6 /* IRAlertManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A59F10C22DC19370046A8D6 /* IRAlertManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,10 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A2C8DBF23BE039C00CAD910 /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
+		8A2C8DC023BE039C00CAD910 /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		8A3A8350238D2B2B00EE74D5 /* IRAlertSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRAlertSystem.h; sourceTree = "<group>"; };
 		8A3A8351238D2B2B00EE74D5 /* IRAlertSystem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRAlertSystem.m; sourceTree = "<group>"; };
-		8A4B7C7E238F9252004FED4D /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIImageEffects.m; path = demo/demo/ThirdParty/XFDialogBuilder/UIImageEffects.m; sourceTree = SOURCE_ROOT; };
-		8A4B7C7F238F9253004FED4D /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIImageEffects.h; path = demo/demo/ThirdParty/XFDialogBuilder/UIImageEffects.h; sourceTree = SOURCE_ROOT; };
 		8A4B7C82238F92B2004FED4D /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		8A4B7C83238F92B2004FED4D /* Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		8A59F10022DC17EA0046A8D6 /* IRAlertManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IRAlertManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,8 +97,8 @@
 				8A59F11E22DC19F80046A8D6 /* IRAlertLoadingViewController.xib */,
 				8A3A8350238D2B2B00EE74D5 /* IRAlertSystem.h */,
 				8A3A8351238D2B2B00EE74D5 /* IRAlertSystem.m */,
-				8A4B7C7F238F9253004FED4D /* UIImageEffects.h */,
-				8A4B7C7E238F9252004FED4D /* UIImageEffects.m */,
+				8A2C8DBF23BE039C00CAD910 /* UIImageEffects.h */,
+				8A2C8DC023BE039C00CAD910 /* UIImageEffects.m */,
 				8A4B7C82238F92B2004FED4D /* Utilities.h */,
 				8A4B7C83238F92B2004FED4D /* Utilities.m */,
 			);
@@ -114,12 +114,12 @@
 			files = (
 				8A59F11F22DC19F80046A8D6 /* IRAlertLoadingViewController.h in Headers */,
 				8A59F11A22DC19BC0046A8D6 /* IRAlertAction.h in Headers */,
-				8A4B7C81238F9253004FED4D /* UIImageEffects.h in Headers */,
 				8A59F11622DC19760046A8D6 /* IRAlert+Package.h in Headers */,
 				8A59F10E22DC19370046A8D6 /* IRAlertManager.h in Headers */,
 				8A4B7C84238F92B2004FED4D /* Utilities.h in Headers */,
 				8A3A8352238D2B2B00EE74D5 /* IRAlertSystem.h in Headers */,
 				8A59F12522DC1F510046A8D6 /* IRAlert.h in Headers */,
+				8A2C8DC123BE039C00CAD910 /* UIImageEffects.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,8 +193,8 @@
 			files = (
 				8A3A8353238D2B2B00EE74D5 /* IRAlertSystem.m in Sources */,
 				8A59F12622DC1F510046A8D6 /* IRAlert.m in Sources */,
-				8A4B7C80238F9253004FED4D /* UIImageEffects.m in Sources */,
 				8A59F12022DC19F80046A8D6 /* IRAlertLoadingViewController.m in Sources */,
+				8A2C8DC223BE039C00CAD910 /* UIImageEffects.m in Sources */,
 				8A59F10F22DC19370046A8D6 /* IRAlertManager.m in Sources */,
 				8A4B7C85238F92B2004FED4D /* Utilities.m in Sources */,
 				8A59F11B22DC19BC0046A8D6 /* IRAlertAction.m in Sources */,
