@@ -161,10 +161,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/IRAlertManager/IRAlertManager.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LGAlertView/LGAlertView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/IRAlertManager/IRAlertManager.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LGAlertView/LGAlertView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
 fi

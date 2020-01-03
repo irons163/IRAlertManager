@@ -8,5 +8,5 @@ Pod::Spec.new do |spec|
   spec.author       = "irons163"
   spec.platform     = :ios, "9.0"
   spec.source       = { :git => "https://github.com/irons163/IRAlertManager.git", :tag => spec.version.to_s }
-  spec.source_files  = "IRAlertManager/Class/**/*.{h,m}"
+  spec.source_files  = "IRAlertManager/Class/**/*.{h,m,xib}"
 end

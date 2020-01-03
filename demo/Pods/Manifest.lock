@@ -1,20 +1,24 @@
 PODS:
+  - IRAlertManager (1.0.0)
   - LGAlertView (2.4.0)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
+  - IRAlertManager
   - LGAlertView
   - Masonry
 
 SPEC REPOS:
   trunk:
+    - IRAlertManager
     - LGAlertView
     - Masonry
 
 SPEC CHECKSUMS:
+  IRAlertManager: 1bc14f1fbc6376e77cfc496fcfd54ad4560632b9
   LGAlertView: 2f5e83dd5cc2537de57d98727650609e86197d1a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 266807e7fd1f24029dfe55dedc30653ae1912b10
+PODFILE CHECKSUM: 0b609f05617451471968c47b8f8261efc69b5a23
 
 COCOAPODS: 1.8.0.beta.2
