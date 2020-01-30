@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)show;
 - (void)hide;
+
 @end
 
 NS_ASSUME_NONNULL_END

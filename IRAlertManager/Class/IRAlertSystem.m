@@ -103,30 +103,36 @@
     maskView.image = bgImage;
 }
 
--(void)setCornerRadius:(CGFloat)cornerRadius{
-//    [dialog.layer setCornerRadius:cornerRadius];
+- (void)setCornerRadius:(CGFloat)cornerRadius {
+    [dialog.view.layer setCornerRadius:cornerRadius];
 }
 
--(void)show {
-//    [dialog showWithAnimationBlock:nil];
+- (void)show {
     for (IRAlertAction *iraction in self.actions) {
         [dialog addAction:[UIAlertAction actionWithTitle:iraction.title style:iraction.style handler:^(UIAlertAction * _Nonnull action) {
             iraction.handler(iraction);
         }]];
     }
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:dialog animated:YES completion:nil];
+    [self.topMostController presentViewController:dialog animated:YES completion:nil];
 }
 
--(void)hide {
-//    [dialog endEditing:YES];
-//    [dialog hideWithAnimationBlock:nil];
+- (UIViewController*)topMostController {
+    UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
+
+    while (topController.presentedViewController) {
+        topController = topController.presentedViewController;
+    }
+
+    return topController;
+}
+
+- (void)hide {
     [self.actions removeAllObjects];
     [dialog dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - KeyboardNotifications
-- (void)registerForKeyboardNotifications
-{
+- (void)registerForKeyboardNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWasShown:)
                                                  name:UIKeyboardDidShowNotification object:nil];
@@ -135,8 +141,7 @@
                                                  name:UIKeyboardWillHideNotification object:nil];
 }
 
-- (void)keyboardWasShown:(NSNotification*)aNotification
-{
+- (void)keyboardWasShown:(NSNotification*)aNotification {
     CGFloat bottomY = dialog.view.frame.origin.y + dialog.view.frame.size.height;
     CGFloat bottomDistanceToScreen = [UIScreen mainScreen].bounds.size.height - bottomY;
     NSDictionary* info = [aNotification userInfo];
@@ -150,10 +155,10 @@
     }
 }
 
-- (void)keyboardWillBeHidden:(NSNotification*)aNotification
-{
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification {
     CGRect newFrame = dialog.view.frame;
     newFrame.origin.y = originalPositionY;
     dialog.view.frame = newFrame;
 }
+
 @end

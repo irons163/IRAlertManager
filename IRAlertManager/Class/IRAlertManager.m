@@ -32,11 +32,11 @@
     return self;
 }
 
-- (void)showAlert:(IRAlert*)alert {
+- (void)showAlert:(IRAlert *)alert {
     [alert show];
 }
 
-- (void)hideAlert:(IRAlert*)alert {
+- (void)hideAlert:(IRAlert *)alert {
     [alert hide];
 }
 

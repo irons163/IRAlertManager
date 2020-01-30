@@ -31,10 +31,10 @@ typedef float(^addAnimationEngineBlock)(UIView *view);
 - (void)showAlert:(IRAlert*)alert;
 - (void)hideAlert:(IRAlert*)alert;
 
-- (void)showLoadingViewWithTarget:(UIViewController*)target;
+- (void)showLoadingViewWithTarget:(UIViewController *)target;
 - (void)showLoadingViewWithTarget:(UIViewController *)target backgroundImage:(UIImage *)backgroundImage;
-- (void)hideLoadingViewWithTarget:(UIViewController*)target;
-- (BOOL)isLoadingViewShowingWithTarget:(UIViewController*)target;
+- (void)hideLoadingViewWithTarget:(UIViewController *)target;
+- (BOOL)isLoadingViewShowingWithTarget:(UIViewController *)target;
 
 @end
 

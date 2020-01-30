@@ -10,8 +10,6 @@
 #import "IRAlertXF.h"
 #import "IRAlertLG.h"
 #import "CustomAlertView.h"
-//#import "IRAlert/NetworkManager.h"
-//#import <IRNotificationReceiver/IRNotificationReceiver.h>
 
 #define GetUserProfileSuccessNotification @"GetUserProfileSuccessNotification"
 #define GetFriendsSuccessNotification @"GetFriendsSuccessNotification"
@@ -171,10 +169,6 @@
 }
 
 - (IBAction)showSystemAlert:(id)sender {
-//    [self setBlurWithRadius:[ViewController blurRadius]
-//                  tintColor:[ViewController blurTintColor]
-//      saturationDeltaFactor:[ViewController blurSaturationDeltaFactor] toAlert:alert];
-//    [alert setCornerRadius:20];
     alert = [[IRAlertSystem alloc] init];
     
     __weak IRAlert *wAlert = alert;
@@ -199,12 +193,6 @@
 }
 
 - (IBAction)showSystemDialog:(id)sender {
-//    [self setBlurWithRadius:[ViewController blurRadius]
-//                  tintColor:[ViewController blurTintColor]
-//      saturationDeltaFactor:[ViewController blurSaturationDeltaFactor] toAlert:alert];
-//    [alert setCornerRadius:20];
-    alert = [[IRAlertSystem alloc] initWithStyle:IRAlertControllerStyleAlert];
-    ((IRAlertSystem *)alert).title = @"Test";
     alert = [[IRAlertSystem alloc] initWithStyle:IRAlertControllerStyleAlert];
     ((IRAlertSystem *)alert).title = @"Message";
     
@@ -229,8 +217,6 @@
 }
 
 - (IBAction)showSystemDialogAndLoadingpage:(id)sender {
-    alert = [[IRAlertSystem alloc] initWithStyle:IRAlertControllerStyleAlert];
-    ((IRAlertSystem *)alert).title = @"Test";
     alert = [[IRAlertSystem alloc] initWithStyle:IRAlertControllerStyleAlert];
     ((IRAlertSystem *)alert).title = @"Message";
     

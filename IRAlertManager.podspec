@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "IRAlertManager"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "Alert manager for iOS."
   spec.description  = "Alert manager for iOS."
   spec.homepage     = "https://github.com/irons163/IRAlertManager.git"
